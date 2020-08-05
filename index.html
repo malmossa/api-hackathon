@@ -1,121 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Know the world</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+      <title>Know the world</title>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+      <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCowgl1bLtHM4ovnPHoZT9pI3YxWp-6VkE&callback=initMap">
+      </script>
 </head>
 <body>
   <!-- Header -->
-  <div class="container mt-5 auto text-white">
-    <div class="text-center pt-3">
-      <h1>Know the world</h1>
-      <input type="text" style="height: 2rem;">
-      <button class="btn btn-warning" style="height: 2rem;">FIND</button>
+  <div class="container m-auto">
+    <div class="text-center mb-5 pt-3">
+      <h1 class="text-white display-4">Know the world</h1>
+      <div class="input-group m-auto" style="width: 700px;">
+        <select class="custom-select" id="countries" aria-label="Example select with button addon">
+        </select>
+      </div>
     </div>
 
-    <!-- Country Information -->
-
-      <div class="row mt-5 justify-content-center">
-        <!-- left table -->
-        <table class="col-5">
-          <tbody>
-            <tr>
-              <th>Name:</th>
-              <td>United Stats</td>
-            </tr>
-            <tr>
-              <th>Native name:</th>
-              <td>United Stats</td>
-            </tr>
-            <tr>
-              <th>Landuage:</th>
-              <td>United Stats</td>
-            </tr>
-            <tr>
-              <th>Population:</th>
-              <td>United Stats</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- right table -->
-        <table class="col-5">
-          <tbody>
-            <tr>
-              <th>Currencies:</th>
-              <td>United Stats</td>
-            </tr>
-            <tr>
-              <th>Flag:</th>
-              <td>United Stats</td>
-            </tr>
-            <tr>
-              <th>Country Codes:</th>
-              <td>United Stats</td>
-            </tr>
-            <tr>
-              <th>Location:</th>
-              <td>United Stats</td>
-            </tr>
-          </tbody>
-        </table>
+    <!-- Country Information section -->
+    <div class="text-center flag mb-5">
+    </div>
+    <div class="row ml-1 mr-1">
+      <div class="card col">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Capital : </strong><span class="capital"></span></li>
+          <li class="list-group-item"><strong>Area code : </strong><span class="area-code"></span></li>
+          <li class="list-group-item"><strong>Population : </strong><span class="population"></span></li>
+        </ul>
       </div>
-
-      <!-- Map section -->
-      <div class="row mt-5 justify-content-center">
-          <img class="col-8 pb-5 rounded-lg" src="./img/united-states.jpg" alt="">
-        </div>
+      <div class="card col">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Native Name : </strong><span class="nativeName"></span></li>
+          <li class="list-group-item"><strong>Language : </strong><span class="language"></span></li>
+          <li class="list-group-item"><strong>Currency : </strong><span class="currency"></span></li>
+        </ul>
       </div>
+      <div class="card col">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Time zone : </strong><span class="timezone"></span></li>
+          <li class="list-group-item"><strong>Continent : </strong><span class="continent"></span></li>
+          <li class="list-group-item"><strong>Subregion : </strong><span class="subregion"></span></li>
+        </ul>
+      </div>
+    </div>
 
+    <!-- Map section -->
+    <div class="map-container border border-warning rounded">
+      <div class="map"></div>
+    </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCowgl1bLtHM4ovnPHoZT9pI3YxWp-6VkE&callback=initMap&libraries=&v=weekly"
-    defer></script>
+
+
+
+
+
+  <script src="app.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-  <title>Simple Map</title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCowgl1bLtHM4ovnPHoZT9pI3YxWp-6VkE&callback=initMap&libraries=&v=weekly"
-    defer></script>
-  <link rel="stylesheet" type="text/css" href="./style.css" />
-  <script src="./app.js"></script>
-</head>
-
-<body>
-  <div id="map"></div>
-</body>
-
-</html> -->
