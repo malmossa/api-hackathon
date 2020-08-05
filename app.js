@@ -1,5 +1,6 @@
 var countriesDropMenu = document.querySelector("#countries");
 var countries;
+var map;
 
 countriesDropMenu.addEventListener("change", function (event) {
 
@@ -27,11 +28,11 @@ function initialize(countryData) {
     options += `<option value="${countries[i].name}">${countries[i].name}</option>`
   }
   countriesDropMenu.innerHTML = options;
-  displayCountryInf("Afghanistan");
+  displayCountryInf("United States of America");
 }
 
 function displayCountryInf(countryName) {
-  // var countryInfo = countries.find(country => country.name === countryName);
+
   var countryInfo = countries.find(function (country) {
     if (country.name === countryName) {
       return country;
@@ -47,5 +48,14 @@ function displayCountryInf(countryName) {
   document.querySelector(".timezone").textContent = countryInfo.timezones[0];
   document.querySelector(".continent").textContent = countryInfo.region;
   document.querySelector(".subregion").textContent = countryInfo.subregion;
-  document.querySelector(".flag").innerHTML =`<img src="${countryInfo.flag}" alt="" height="50" width="80">`
+  document.querySelector(".flag").innerHTML =`<img src="${countryInfo.flag}" height="150" width="200">`
+
+  map = new google.maps.Map(document.querySelector(".map"), {
+    center: {
+      lat: countryInfo.latlng[0],
+      lng: countryInfo.latlng[1]
+    },
+    zoom: 5
+  });
+
 }

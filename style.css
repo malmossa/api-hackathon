@@ -3,9 +3,19 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* height: 100vh; */
+  height: 100vh;
 }
 
 .container {
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5)
+}
+
+.map-container{
+  margin: 30px auto;
+  width: 700px;
+  height: 300px;
+}
+.map{
+  height:100%;
 }
