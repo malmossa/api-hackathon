@@ -1,121 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-  <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCowgl1bLtHM4ovnPHoZT9pI3YxWp-6VkE&callback=initMap&libraries=&v=weekly"
+      defer></script> -->
   <title>Know the world</title>
 </head>
 <body>
   <!-- Header -->
-  <div class="container mt-5 auto text-white">
-    <div class="text-center pt-3">
-      <h1>Know the world</h1>
-      <input type="text" style="height: 2rem;">
-      <button class="btn btn-warning" style="height: 2rem;">FIND</button>
+  <div class="container mt-5 auto">
+    <div class="text-center mb-5 pt-3">
+      <h1 class="text-white display-4">Know the world</h1>
+      <div class="input-group m-auto" style="width: 700px;">
+        <select class="custom-select" id="countries" aria-label="Example select with button addon">
+        </select>
+        <div class="input-group-append">
+          <button class="btn btn-warning btn-secondary" type="button">Find</button>
+        </div>
+      </div>
     </div>
 
-    <!-- Country Information -->
-
-      <div class="row mt-5 justify-content-center">
-        <!-- left table -->
-        <table class="col-5">
-          <tbody>
-            <tr>
-              <th>Name:</th>
-              <td>United Stats</td>
-            </tr>
-            <tr>
-              <th>Native name:</th>
-              <td>United Stats</td>
-            </tr>
-            <tr>
-              <th>Landuage:</th>
-              <td>United Stats</td>
-            </tr>
-            <tr>
-              <th>Population:</th>
-              <td>United Stats</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <!-- right table -->
-        <table class="col-5">
-          <tbody>
-            <tr>
-              <th>Currencies:</th>
-              <td>United Stats</td>
-            </tr>
-            <tr>
-              <th>Flag:</th>
-              <td>United Stats</td>
-            </tr>
-            <tr>
-              <th>Country Codes:</th>
-              <td>United Stats</td>
-            </tr>
-            <tr>
-              <th>Location:</th>
-              <td>United Stats</td>
-            </tr>
-          </tbody>
-        </table>
+    <!-- Country Information section -->
+    <div class="text-center">
+      <img src="https://restcountries.eu/data/afg.svg" class="rounded" style="width: 400; height: 300;" alt="">
+    </div>
+    <div class="row ml-1 mr-1">
+      <div class="card col">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Capital : </strong><span class="capital"></span></li>
+          <li class="list-group-item"><strong>Area code : </strong><span class="area-code"></span></li>
+          <li class="list-group-item"><strong>Population : </strong><span class="population"></span></li>
+        </ul>
       </div>
+      <div class="card col">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Native Name : </strong><span class="nativeName"></span></li>
+          <li class="list-group-item"><strong>Language : </strong><span class="language"></span></li>
+          <li class="list-group-item"><strong>Currency : </strong><span class="currency"></span></li>
+        </ul>
+      </div>
+      <div class="card col">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><strong>Time zone : </strong><span class="timezone"></span></li>
+          <li class="list-group-item"><strong>Continent : </strong><span class="continent"></span></li>
+          <li class="list-group-item"><strong>Subregion : </strong><span class="subregion"></span></li>
+        </ul>
+      </div>
+    </div>
+
+      <!-- <div class="card m-1">
+        <div class="card-header h6">Flag</div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item flag"></li>
+        </ul>
+      </div> -->
+
+    </div>
+
+
 
       <!-- Map section -->
       <div class="row mt-5 justify-content-center">
-          <img class="col-8 pb-5 rounded-lg" src="./img/united-states.jpg" alt="">
-        </div>
+        <img class="col-8 pb-5 rounded-lg" src="./img/united-states.jpg" alt="">
       </div>
 
-  </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCowgl1bLtHM4ovnPHoZT9pI3YxWp-6VkE&callback=initMap&libraries=&v=weekly"
-    defer></script>
+  </div>
+  <script src="app.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> -->
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- <!DOCTYPE html>
-<html>
-
-<head>
-  <title>Simple Map</title>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCowgl1bLtHM4ovnPHoZT9pI3YxWp-6VkE&callback=initMap&libraries=&v=weekly"
-    defer></script>
-  <link rel="stylesheet" type="text/css" href="./style.css" />
-  <script src="./app.js"></script>
-</head>
-
-<body>
-  <div id="map"></div>
-</body>
-
-</html> -->
