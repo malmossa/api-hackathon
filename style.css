@@ -23,11 +23,26 @@ body {
 .input-group {
   width: 700px;
 }
+.card {
+  color: white;
+}
+.card, .list-group-item{
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1)
+    )
+}
+/* .moreInfo-container {
+  visibility: hidden;
+} */
 @media only screen and (max-width: 750px) {
     .map-container {
         width: 500px;
     }
     .input-group {
       width: 500px;
+    }
+    h5, p {
+      font-size: 1rem;
     }
 }

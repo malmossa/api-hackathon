@@ -48,7 +48,7 @@ function displayCountryInf(countryName) {
   document.querySelector(".timezone").textContent = countryInfo.timezones[0];
   document.querySelector(".continent").textContent = countryInfo.region;
   document.querySelector(".subregion").textContent = countryInfo.subregion;
-  document.querySelector(".location").textContent = countryInfo.latlng;
+  document.querySelector(".location").textContent = `lat: ${countryInfo.latlng[0]}  lng: ${countryInfo.latlng[1]}`;
   document.querySelector(".alpha3Code").textContent = countryInfo.alpha3Code;
   document.querySelector(".size").textContent = `${countryInfo.area.toLocaleString()} Km`;
   document.querySelector(".flag").innerHTML =`<img src="${countryInfo.flag}" height="150" width="200">`
