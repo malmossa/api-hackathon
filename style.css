@@ -1,16 +1,15 @@
 body {
-  background-image: url(./img/backgroung_img.jpg);
+  /* background-image: url(./img/world-map-400X300.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100vh; */
+background-image: linear-gradient(to right, #785807, #f1b10e);
 }
 
 .container {
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.3);
 }
-
 .map-container{
   margin: 30px auto;
   width: 700px;
@@ -32,17 +31,61 @@ body {
     rgba(0, 0, 0, 0.1)
     )
 }
-/* .moreInfo-container {
-  visibility: hidden;
-} */
-@media only screen and (max-width: 750px) {
-    .map-container {
-        width: 500px;
-    }
-    .input-group {
-      width: 500px;
-    }
-    h5, p {
-      font-size: 1rem;
-    }
+
+@media only screen and ( min-width: 375px) {
+  .container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .input-group {
+    width: 300px;
+  }
+  .map-container {
+    width: 300px;
+    height: 250px;
+  }
+  .card {
+    text-align: center;
+  }
+}
+
+@media only screen and ( min-width: 667px) {
+  .container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .input-group {
+    width: 450px;
+  }
+  .map-container {
+    width: 500px;
+    height: 300px;
+  }
+}
+
+@media only screen and ( max-width: 768px) {
+  .container h1 {
+    margin-bottom: 1.5rem;
+  }
+  .input-group {
+    width: 450px;
+  }
+  .map-container {
+    width: 600px;
+    height: 300px;
+  }
+}
+
+@media only screen and ( max-width: 1024px) {
+  .container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .input-group {
+    width: 600px;
+  }
+  .map-container {
+    width: 600px;
+    height: 300px;
+  }
 }
