@@ -19,7 +19,7 @@ Try the application live at [https://malmossa.github.io/know-the-world/](https:/
 
 ## Preview
 
-![SGT React](assets/sgt_react.gif)
+![SGT React](img/know the world screen shot.gif)
 
 ## Development
 
