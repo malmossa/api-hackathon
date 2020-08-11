@@ -19,14 +19,10 @@ Try the application live at [https://malmossa.github.io/know-the-world/](https:/
 
 ## Preview
 
-![screen shot of the app](img/know-the-world-screen-shot.gif)
+![screen shot of the app](img/know_the_world_screen_shot.gif)
 
 ## Development
 
-### System Requirements
-
-- Node.js 10 or higher
-- NPM 6 or higher
 
 ### Getting Started
 
@@ -34,23 +30,8 @@ Try the application live at [https://malmossa.github.io/know-the-world/](https:/
 
     ```shell
     git clone https://github.com/malmossa/know-the-world.git
-    cd sgt-react
+    cd know-the-world
     ```
 
-1. Install all dependencies with NPM.
+2. Open index.html in your browser.
 
-    ```shell
-    npm install
-    ```
-
-1. Import the example database to MongoDB.
-
-    ```shell
-    mongoimport --db sgt-react database/dump.json
-    ```
-
-1. Start the project. Once started you can view the application by opening http://localhost:3000 in your browser.
-
-    ```shell
-    npm run dev
-    ```
