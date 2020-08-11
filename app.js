@@ -1,13 +1,16 @@
 var countriesDropMenu = document.querySelector("#countries");
 var countries;
 var map;
+var loading;
 
 countriesDropMenu.addEventListener("change", function (event) {
 
   displayCountryInf(event.target.value)
 })
 
-fetch("https://restcountries.eu/rest/v2/all")
+function loadeCountreis () {
+
+  fetch("https://restcountries.eu/rest/v2/all")
   .then(function(res) {
     // console.log(res.json());
     return res.json();
@@ -20,15 +23,22 @@ fetch("https://restcountries.eu/rest/v2/all")
     console.log("Error: ", err)
   }
   )
+}
 
 function initialize(countryData) {
+
   countries = countryData;
-  var options = "";
+  var options = `<option>United States of America</option>`;
   for ( var i = 0; i < countries.length; i ++ ) {
+    if (countries[i].name === "United States of America")
+    continue;
     options += `<option value="${countries[i].name}">${countries[i].name}</option>`
   }
+
   countriesDropMenu.innerHTML = options;
   displayCountryInf("United States of America");
+  showPage()
+
 }
 
 function displayCountryInf(countryName) {
@@ -72,3 +82,5 @@ function displayCountryInf(countryName) {
   });
 
 }
+
+loadeCountreis()

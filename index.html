@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
       <title>Know the world</title>
@@ -12,7 +12,7 @@
 </head>
 <body>
   <!-- Header -->
-  <div class="container m-auto">
+  <div class="container mt-3 mb-3">
     <div class="text-center mb-5 pt-3">
       <h1 class="text-white display-4">Know the world</h1>
       <div class="input-group m-auto">
@@ -22,108 +22,115 @@
     </div>
 
     <!-- Country Information section -->
-    <div class="text-center flag mb-5 rounded"></div>
-    <div class="row">
-      <div class="col-sm-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Capital</h5>
-            <p class="card-text capital"></p>
+    <!-- <div class="loader text-center">
+      <div class="spinner-grow text-warning" style="width: 6rem; height: 6rem;" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div> -->
+    <div class="content">
+      <div class="text-center flag mb-5 rounded"></div>
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Capital</h5>
+              <p class="card-text capital"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Area code</h5>
+              <p class="card-text area-code"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Population</h5>
+              <p class="card-text population"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Country size</h5>
+              <p class="card-text size"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Native Name</h5>
+              <p class="card-text nativeName"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Language</h5>
+              <p class="card-text language"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Currency</h5>
+              <p class="card-text currency"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Location</h5>
+              <p class="card-text location"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Time zone</h5>
+              <p class="card-text timezone"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Continent</h5>
+              <p class="card-text continent"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Subregion</h5>
+              <p class="card-text subregion"></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Country Code</h5>
+              <p class="card-text alpha3Code"></p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Area code</h5>
-            <p class="card-text area-code"></p>
-          </div>
-        </div>
+      <!-- Map section -->
+      <div class="map-container border border-warning rounded">
+        <div class="map"></div>
       </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Population</h5>
-            <p class="card-text population"></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Country size</h5>
-            <p class="card-text size"></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Native Name</h5>
-            <p class="card-text nativeName"></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Language</h5>
-            <p class="card-text language"></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Currency</h5>
-            <p class="card-text currency"></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Location</h5>
-            <p class="card-text location"></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Time zone</h5>
-            <p class="card-text timezone"></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Continent</h5>
-            <p class="card-text continent"></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Subregion</h5>
-            <p class="card-text subregion"></p>
-          </div>
-        </div>
-      </div>
-      <div class="col-sm-3">
-        <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">Country Code</h5>
-            <p class="card-text alpha3Code"></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Map section -->
-    <div class="map-container border border-warning rounded">
-      <div class="map"></div>
     </div>
   </div>
 
