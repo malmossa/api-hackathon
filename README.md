@@ -27,14 +27,13 @@ Try the application live at [https://malmossa.github.io/know-the-world/](https:/
 
 - Node.js 10 or higher
 - NPM 6 or higher
-- MongoDB 4 or higher
 
 ### Getting Started
 
 1. Clone the repository.
 
     ```shell
-    git clone https://github.com/Learning-Fuze/sgt-react
+    git clone https://github.com/malmossa/know-the-world.git
     cd sgt-react
     ```
 
