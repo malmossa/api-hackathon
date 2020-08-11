@@ -1,14 +1,10 @@
 body {
-  /* background-image: url(./img/world-map-400X300.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100vh; */
 background-image: linear-gradient(to right, #785807, #f1b10e);
 }
 
 .container {
   height: 100vh;
+  max-width: 1250px;
 }
 .map-container{
   margin: 30px auto;
@@ -32,15 +28,19 @@ background-image: linear-gradient(to right, #785807, #f1b10e);
     )
 }
 
-@media only screen and ( min-width: 375px) {
+
+@media only screen and ( max-width: 375px) {
+  .container {
+    max-width: 400px;
+  }
   .container h1 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
   }
-  .input-group {
+  .container .input-group {
     width: 300px;
   }
-  .map-container {
+  .container .map-container {
     width: 300px;
     height: 250px;
   }
@@ -50,20 +50,35 @@ background-image: linear-gradient(to right, #785807, #f1b10e);
 }
 
 @media only screen and ( min-width: 667px) {
+   .container {
+    max-width: 600px;
+  }
   .container h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 1.5rem;
   }
-  .input-group {
+  .card-title {
+    font-size: 14px;
+  }
+  .card-text {
+    font-size: 10px;
+  }
+  .container .input-group {
     width: 450px;
   }
-  .map-container {
+  .container .map-container {
     width: 500px;
     height: 300px;
   }
+  .card-body {
+    width: 13rem;
+  }
+  .col-sm-3 {
+    padding: 3px;
+  }
 }
 
-@media only screen and ( max-width: 768px) {
+/* @media only screen and ( max-width: 768px) {
   .container h1 {
     margin-bottom: 1.5rem;
   }
@@ -88,4 +103,4 @@ background-image: linear-gradient(to right, #785807, #f1b10e);
     width: 600px;
     height: 300px;
   }
-}
+} */
