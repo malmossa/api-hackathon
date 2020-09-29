@@ -26,7 +26,7 @@ background-image: linear-gradient(to right, #785807, #f1b10e);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-width: 100px;
+  max-width: 100%;
 }
 .card, .list-group-item{
   background: linear-gradient(
@@ -36,79 +36,35 @@ background-image: linear-gradient(to right, #785807, #f1b10e);
 }
 
 
-
-@media only screen and ( max-width: 375px) {
-  .container {
-    max-width: 400px;
-  }
+@media only screen and (max-width: 812px) {
   .container h1 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
   }
-  .container .input-group {
-    width: 300px;
-  }
-  .container .map-container {
-    width: 300px;
-    height: 250px;
-  }
-  .card {
-    text-align: center;
-  }
-}
 
-@media only screen and ( min-width: 667px) {
-   .container {
-    max-width: 600px;
-  }
-  .container h1 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  .card-title {
-    font-size: 14px;
-  }
-  .card-text {
-    font-size: 10px;
-  }
-  .container .input-group {
-    width: 450px;
-  }
-  .container .map-container {
-    width: 500px;
-    height: 300px;
-  }
-  .card-body {
-    width: 13rem;
-  }
-  .col-sm-3 {
-    padding: 3px;
-  }
-}
-
-/* @media only screen and ( max-width: 768px) {
-  .container h1 {
-    margin-bottom: 1.5rem;
-  }
   .input-group {
-    width: 450px;
+    max-width: 320px;
   }
+
   .map-container {
-    width: 600px;
-    height: 300px;
+    max-width: 330px;
   }
 }
 
-@media only screen and ( max-width: 1024px) {
-  .container h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-  }
+@media only screen and (max-width: 568px) {
   .input-group {
-    width: 600px;
+    max-width: 290px;
   }
+
   .map-container {
-    width: 600px;
-    height: 300px;
+    max-width: 290px;
   }
-} */
+}
+
+@media only screen and (max-width: 576px) {
+
+}
+
+@media only screen and (max-width: 500px) {
+
+}
